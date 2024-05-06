@@ -5,7 +5,7 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  Platform,
+  Platform, SafeAreaView,
 } from 'react-native';
 
 import Icon from '@nutui/nutui-react-native/icon';
@@ -15,8 +15,8 @@ import { CategoryList, DemoList } from '../demoList';
 const Home = (props: any) => {
   const { navigate } = props.navigation;
   return (
-    <View style={styles.page}>
-      <ScrollView style={{ paddingTop: Platform.OS === 'web' ? 0 : 44 }}>
+    <SafeAreaView style={styles.page}>
+      <ScrollView style={{ paddingTop: Platform.OS === 'web' ? 0 : 0 }}>
         <View style={styles.brand}>
           <Icon
             name="https://img12.360buyimg.com/imagetools/jfs/t1/123397/23/33640/14811/6393fa43Ee7364f67/2d0317b8a5efb087.png"
@@ -56,7 +56,7 @@ const Home = (props: any) => {
           })}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
