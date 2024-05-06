@@ -105,11 +105,19 @@ const Utils = {
    * @return {Boolean}
    */
   compareDate(date1: string, date2: string): boolean {
-    const startTime = new Date(date1.replace('-', '/').replace('-', '/'))
-    const endTime = new Date(date2.replace('-', '/').replace('-', '/'))
+    // console.log("compareDate======>>>>date1000:", date1, "date2:",date2)
+    // const startTime = new Date(date1.replace('-', '/').replace('-', '/'))
+    // const endTime = new Date(date2.replace('-', '/').replace('-', '/'))
+
+    const startTime = new Date(date1)
+    const endTime = new Date(date2)
+
+
     if (startTime >= endTime) {
+      // console.log("compareDate=====11=false>>>>date1:", date1, "date2:",date2, "startTime:", startTime, "endTime:", endTime)
       return false
     }
+    // console.log("compareDate=====11=true>>>>date1:", date1, "date2:",date2, "startTime:", startTime, "endTime:", endTime)
     return true
   },
 

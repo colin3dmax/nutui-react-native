@@ -848,7 +848,6 @@ export const CalendarItem = React.forwardRef<
             {state.monthsData
               .slice(monthDefaultRange[0], monthDefaultRange[1])
               .map((month: any, key: number) => {
-                console.log('month', month)
                 return (
                   <View style={styles.calendarMonth} key={key}>
                     <Text style={styles.calendarMonthTitle}>{month.title}</Text>
